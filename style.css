@@ -44,7 +44,7 @@ body {
   color: #BEA493;
 }
 
-/* Hamburger Menu */
+/*Menu */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -60,7 +60,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Main Content Styles */
+/* Main Content*/
 .main-content {
   padding: 2rem;
   text-align: center;
@@ -82,44 +82,46 @@ body {
   padding-inline: 20px;
 }
 
-.button-container button {
-  padding: 0.8rem 1.5rem;
-  background-color: #483c32;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin: 10px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+.button {
+    padding: 0.8rem 1.5rem;
+    background-color: #483c32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.button-container button:hover {
-  background-color: #BEA493;
+.button:hover {
+    background-color: #BEA493;
 }
 
-/* Responsive Styles */
+/* Responsive*/
 @media (max-width: 768px) {
   .hamburger {
     display: block;
-    z-index: 1001; /* Pastikan hamburger di atas nav */
+    z-index: 1001;
   }
 
   .header {
-    position: relative; /* Tambahkan ini untuk konteks stacking */
-    z-index: 1000; /* Pastikan header di atas konten lain */
+    position: relative; 
+    z-index: 1000; 
   }
 
   .header__nav {
     position: fixed;
-    top: 70px; /* Sesuaikan dengan tinggi header */
+    top: 70px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 70px); /* Kurangi dengan tinggi header */
+    height: calc(100vh - 70px);
     background-color: #483c32;
     transition: left 0.3s ease;
-    z-index: 999; /* Di bawah header */
-    overflow-y: auto; /* Untuk scroll jika konten panjang */
+    z-index: 999;
+    overflow-y: auto;
   }
 
   .header__nav.active {
@@ -135,8 +137,7 @@ body {
     margin: 1rem 0;
     text-align: center;
   }
-
-  /* Animasi hamburger saat aktif */
+  
   .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
