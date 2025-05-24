@@ -154,4 +154,30 @@ body.noscroll {
     position: fixed;
     width: 100%;
   }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+    .image-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 1rem;
+    padding-inline: 0;
+  }
+  .anggota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .anggota img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 1rem;
+    padding-inline: 0;
+  }
 }
