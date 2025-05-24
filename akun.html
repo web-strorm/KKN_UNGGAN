@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>KKN Unggan</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="UNGGAN_SUMPUR_KUDUS_LOGO_FIKS.png" alt="Logo" />
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="header__nav" id="navMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://maps.app.goo.gl/CLjmybUitoE9LFYo6">Lokasi</a></li>
+                <li><a href="kegiatan.html">History</a></li>
+                <li><a href="akun.html">Follow us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1>KKN Unggan - Sumpur Kudus</h1>
+        <p class="subtitle">Akun Medsos</p>
+        <div class="image-container">
+            <img src="ig.jpg" alt="KKN Logo" />
+        </div>
+        <div class="button-container">
+            <button href="https://www.instagram.com/kknunp_unggansumpurkudus?igsh=NXBkaWpmaWJ3eXRz" type="button">Follow IG</button>
+        </div>
+        <div class="image-container">
+            <img src="Tik-Tok.jpg" alt="KKN Logo" />
+        </div>
+        <div class="button-container">
+            <button href="https://www.tiktok.com/@kkn_unggan.sumpurkudus?_t=ZS-8wbrR2yOqDR&_r=1" type="button">Follow Tik-Tok</button>
+        </div>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.header__nav');
+    const body = document.body;
+
+    hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      nav.classList.toggle('active');
+      
+      // Toggle class noscroll pada body
+      if (nav.classList.contains('active')) {
+        body.classList.add('noscroll');
+      } else {
+        body.classList.remove('noscroll');
+      }
+    });
+    });
+    </script>
+</body>
+</html>
