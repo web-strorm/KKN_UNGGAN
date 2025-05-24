@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>KKN Unggan</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="UNGGAN_SUMPUR_KUDUS_LOGO_FIKS.png" alt="Logo" />
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="header__nav" id="navMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://maps.app.goo.gl/CLjmybUitoE9LFYo6">Lokasi</a></li>
+                <li><a href="kegiatan.html">History</a></li>
+                <li><a href="akun.html">Follow us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1>KKN Unggan - Sumpur Kudus</h1>
+        <p class="subtitle">"Slogan/Jargon"</p>
+        <div class="image-container">
+            <img src="UNGGAN_SUMPUR_KUDUS_LOGO_FIKS.png" alt="KKN Logo" />
+        </div>
+        <div class="button-container">
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            const hamburger = document.getElementById('hamburger');
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
