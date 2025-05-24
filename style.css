@@ -102,17 +102,24 @@ body {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    z-index: 1001; /* Pastikan hamburger di atas nav */
+  }
+
+  .header {
+    position: relative; /* Tambahkan ini untuk konteks stacking */
+    z-index: 1000; /* Pastikan header di atas konten lain */
   }
 
   .header__nav {
     position: fixed;
-    top: 65px;
+    top: 70px; /* Sesuaikan dengan tinggi header */
     left: -100%;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px); /* Kurangi dengan tinggi header */
     background-color: #483c32;
     transition: left 0.3s ease;
-    z-index: 1000;
+    z-index: 999; /* Di bawah header */
+    overflow-y: auto; /* Untuk scroll jika konten panjang */
   }
 
   .header__nav.active {
@@ -140,5 +147,10 @@ body {
 
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
+  }
+body.noscroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
   }
 }
